@@ -1,0 +1,50 @@
+my_name = "Margarita"
+print(my_name)
+
+my_age = "18"
+print("My name is", my_name, "and I'm", my_age,"years old.")
+
+my_name_5 = my_name*5
+print(my_name_5)
+
+user_name = input("What's your name?")
+user_age = input("How old are you?")
+try:
+    user_age_int = int(user_age)
+except ValueError:
+    print("Enter value")
+if user_age_int > 21:
+    print("Hello,", user_name, ".", "Are you really", user_age, "years old? Already saving money for retirement?")
+else:
+    print("Hello,", user_name, ".", "Are you really", user_age, "years old? So young... What are you doing here?")
+
+user_name_stroka = str(user_name)
+print(user_name_stroka[1:-1])
+print(user_name_stroka[::-1])
+print(user_name_stroka[-3::1])
+print(user_name_stroka[:5:1])
+
+length_of_user_name =len(user_name_stroka)
+proiz_age = 1
+sum_age = 0
+user_age = int(user_age)
+while (user_age != 0):
+    sum_age = sum_age + (user_age % 10)
+    proiz_age = proiz_age * (user_age % 10)
+    user_age = user_age // 10
+print("length=", length_of_user_name,", summ=",sum_age,", multiplication=", proiz_age)
+
+zaglav = user_name.capitalize()
+verhni = user_name.upper()
+nijni = verhni.swapcase()
+print(zaglav)
+print(nijni)
+print(verhni)
+
+question = input("Print the rezult of 3+1*7")
+correct_answer = 3+1*7
+if (question != correct_answer):
+    print("Correct answer!")
+else:
+    print("Error!")
+    print("Correct answer: ",  correct_answer)
